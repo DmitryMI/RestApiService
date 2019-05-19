@@ -107,7 +107,6 @@ public class DbWrapper
     public void Connect() throws ExecutionException, ConnectionException {
         try
         {
-            //String instanceName = serverName + "\\instanceName";
             String instanceName = serverName;
             String connectionUrl = "jdbc:sqlserver://%1$s;databaseName=%2$s;user=%3$s;password=%4$s;";
             String connectionString = String.format(connectionUrl, instanceName, dbName, userName, password);
@@ -232,12 +231,22 @@ public class DbWrapper
         }
     }
 
-    private void WriteForGuid(int guid, Status status) throws SQLException {
-        String query = String.format("insert into Tasks (taskGuid, dtStamp, taskStatus) values \n" +
-                        "(\n" +
-                        "\t%d, CURRENT_TIMESTAMP, '%s'\n" +
-                        ")",
-                guid, StatusToString(status));
+    private void WriteForGuid(int guid, Status status) throws SQLException, NotConnectedException, ExecutionException
+    {
+        String query;
+        if(!CheckGuid(guid))
+        {
+            query = String.format("insert into Tasks (taskGuid, dtStamp, taskStatus) values \n" +
+                            "(\n" +
+                            "\t%d, CURRENT_TIMESTAMP, '%s'\n" +
+                            ")",
+                    guid, StatusToString(status));
+        }
+        else
+        {
+            query = String.format("use JavaServerDb update Tasks SET taskStatus = '%s' where taskGuid = %d",
+                    StatusToString(status), guid);
+        }
 
         Statement statement = connection.createStatement();
         statement.execute(query);

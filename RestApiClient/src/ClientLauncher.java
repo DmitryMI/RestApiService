@@ -47,10 +47,11 @@ public class ClientLauncher {
 
             con.setDoOutput(true);
             con.setRequestMethod("POST");
-            con.setRequestProperty("User-Agent", "Java client");
+            con.setRequestProperty("User-Agent", USER_AGENT);
             con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
 
-            try (DataOutputStream wr = new DataOutputStream(con.getOutputStream())) {
+            try (DataOutputStream wr = new DataOutputStream(con.getOutputStream()))
+            {
                 wr.write(postData);
             }
 

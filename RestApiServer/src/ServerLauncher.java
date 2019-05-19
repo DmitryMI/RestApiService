@@ -5,6 +5,9 @@ import java.util.Hashtable;
 
 public class ServerLauncher
 {
+    private static final long RUNNING_TIME = 5000;
+
+
     public static void main(String[] args)
     {
         System.out.println("Server stared initialization.");
@@ -25,10 +28,31 @@ public class ServerLauncher
 
     }
 
+    class ExpirationHandler implements MultiTimer.ExpirationCallback
+    {
+        @Override
+        public void Expired(int guid) {
+            try {
+                database.WriteData(guid, DbWrapper.Status.FINISHED);
+                System.out.println(String.format("Task %d is not at 'finished' status", guid));
+            } catch (DbWrapper.NotConnectedException e) {
+                e.printStackTrace();
+            } catch (DbWrapper.ExecutionException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    MultiTimer timer;
+
     private DbWrapper database = new DbWrapper();
 
     private void LaunchListener() throws DbWrapper.ConnectionException, DbWrapper.ExecutionException {
         database.Connect();
+
+        timer = new MultiTimer(new ExpirationHandler());
+        timer.LaunchTimer();
 
         NetWrapper wrapper = new NetWrapper(new GetRequestHandler(), new PostRequestHandler());
         wrapper.StartServer();
@@ -98,7 +122,9 @@ public class ServerLauncher
                 database.WriteData(guid, DbWrapper.Status.RUNNING);
 
                 workResult = new WorkResult(202, null);
-                // TODO Update timer
+
+                timer.RegisterTimer(guid, RUNNING_TIME);
+
                 System.out.println("Task %d was just set to running state.");
             }
             else

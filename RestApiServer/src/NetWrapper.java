@@ -6,6 +6,7 @@ import java.util.Hashtable;
 public class NetWrapper
 {
     public final int PORT = 80;
+    private final int BUFFER_SIZE = 1024;
 
     public interface MethodGetCallback
     {
@@ -52,7 +53,7 @@ public class NetWrapper
                     "Content-Type: text/html\r\n" +
                     "Content-Length: " + s.length() + "\r\n" +
                     "Connection: close\r\n\r\n";
-            response = String.format(response, code, HttpParserNoStream.getHttpReply(code));
+            response = String.format(response, code, HttpParser.getHttpReply(code));
             String result = response + s;
             OutputStream os = openedSocket.getOutputStream();
             os.write(result.getBytes());
@@ -139,9 +140,11 @@ public class NetWrapper
             this.is = s.getInputStream();
         }
 
-        private void readInputHeaders() throws Throwable
+        private void readInput() throws Throwable
         {
-            byte[] data = new byte[1024];
+            System.out.println("Reading data... Availible: " + is.available());
+
+            byte[] data = new byte[BUFFER_SIZE];
             int i = 0;
             int availible = is.available();
             while(availible > 0)
@@ -152,8 +155,10 @@ public class NetWrapper
             }
 
             String dataString = new String(data);
+            System.out.println("Data:\n" + dataString.trim());
+            System.out.println("Length: " + dataString.length());
 
-            HttpParserNoStream parser = new HttpParserNoStream(dataString);
+            HttpParser parser = new HttpParser(dataString);
             parser.parseRequest();
             String method = parser.getMethod();
             Hashtable params = parser.getParams();
@@ -163,10 +168,14 @@ public class NetWrapper
 
             if(method.equals("GET"))
             {
+                System.out.println("Launching callback for GET method");
+
                 getCallback.OnRequestReceived(url, params, responseHandler);
             }
             else if(method.equals("POST"))
             {
+                System.out.println("Reading request body");
+
                 // Reading request body
                 int curPos = parser.getCurPos();
 
@@ -179,6 +188,8 @@ public class NetWrapper
 
                 String body = bodyBuilder.toString();
                 body = body.trim();
+
+                System.out.println("Body:\n" + body);
 
                 postCallback.OnRequestReceived(url, body, responseHandler);
             }
@@ -194,7 +205,7 @@ public class NetWrapper
         {
             try
             {
-                readInputHeaders();
+                readInput();
             }
             catch (Throwable t)
             {

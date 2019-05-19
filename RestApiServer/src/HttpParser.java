@@ -16,13 +16,18 @@
  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
+/* Dmitry
+Refactored. Disabled usage of InputStream.
+Now uses String data instead.
+*/
+
 
 import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.net.URLDecoder;
 
-public class HttpParserNoStream
+public class HttpParser
 {
     private static final String[][] HttpReplies = {{"100", "Continue"},
             {"101", "Switching Protocols"},
@@ -72,7 +77,7 @@ public class HttpParserNoStream
     private String data;
     private int curPos;
 
-    public HttpParserNoStream(String data)
+    public HttpParser(String data)
     {
         this.data = data;
         curPos = 0;
