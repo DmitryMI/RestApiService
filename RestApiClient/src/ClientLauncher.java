@@ -17,13 +17,29 @@ public class ClientLauncher {
         BufferedReader reader =
                 new BufferedReader(new InputStreamReader(System.in));
 
+
         while (true)
         {
-            System.out.println("Press Enter to send test requests...");
-            reader.read();
-            try {
-                System.out.println("Sending...");
-                TestPostNoGuid();
+            System.out.println("Input G to send GUID = 50 and N to send NO-GUID...");
+            char sym = (char)reader.read();
+            try
+            {
+                if(sym == 'N')
+                {
+                    System.out.println("Sending NO-GUID...");
+
+                    TestPostNoGuid();
+                }
+                else if(sym == 'G')
+                {
+                    System.out.println("Sending GUID = 50...");
+
+                    TestPostGuid();
+                }
+                else
+                {
+                    System.out.println("Unrecognised command.");
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
