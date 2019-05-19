@@ -121,9 +121,13 @@ public class ServerLauncher
         WorkResult workResult = null;
         try
         {
-            JSONObject root = new JSONObject(requestText);
+            JSONObject root = null;
+            if(!requestText.equals(""))
+            {
+                root = new JSONObject(requestText);
+            }
 
-            if(root.has("guid"))
+            if(root != null && root.has("guid"))
             {
                 int guid = root.getInt("guid");
                 database.WriteData(guid, DbWrapper.Status.RUNNING);

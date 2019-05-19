@@ -3,6 +3,7 @@ import org.json.JSONObject;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
@@ -16,11 +17,13 @@ public class ClientLauncher {
         BufferedReader reader =
                 new BufferedReader(new InputStreamReader(System.in));
 
-        while (true) {
+        while (true)
+        {
             System.out.println("Press Enter to send test requests...");
             reader.read();
             try {
-                TestPost();
+                System.out.println("Sending...");
+                TestPostNoGuid();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -28,17 +31,26 @@ public class ClientLauncher {
         }
     }
 
-    // Test POST request
-    static void TestPost() throws IOException
+    static void TestPostNoGuid() throws IOException
     {
-        String url = "http://localhost/task";
+        TestPost("\n");
+    }
 
+    // Test POST request
+    static void TestPostGuid() throws IOException
+    {
         JSONObject json = new JSONObject();
         json.put("guid", 50);
 
         String urlParameters = json.toString();
 
-        byte[] postData = urlParameters.getBytes(StandardCharsets.UTF_8);
+        TestPost(urlParameters);
+    }
+
+    static void TestPost(String data) throws IOException {
+        String url = "http://localhost/task";
+
+        byte[] postData = data.getBytes(StandardCharsets.UTF_8);
 
         try {
 
@@ -58,7 +70,8 @@ public class ClientLauncher {
             StringBuilder content;
 
             try (BufferedReader in = new BufferedReader(
-                    new InputStreamReader(con.getInputStream()))) {
+                    new InputStreamReader(con.getInputStream())))
+            {
 
                 String line;
                 content = new StringBuilder();
@@ -76,4 +89,6 @@ public class ClientLauncher {
             con.disconnect();
         }
     }
+
+
 }

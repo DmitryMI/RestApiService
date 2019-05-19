@@ -20,10 +20,10 @@
       <file leaf-file-name="ServerLauncher.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RestApiServer/src/ServerLauncher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1640">
-              <caret line="104" column="53" lean-forward="false" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+            <state relative-caret-position="311">
+              <caret line="127" column="13" lean-forward="true" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
               <folding>
-                <element signature="e#0#6145#0" expanded="true" />
+                <element signature="e#0#6258#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#1965#1966#0" expanded="true" />
                 <element signature="e#2008#2009#0" expanded="true" />
@@ -81,8 +81,8 @@
       <file leaf-file-name="ClientLauncher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RestApiClient/src/ClientLauncher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,8 +107,8 @@
       <file leaf-file-name="NetWrapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RestApiServer/src/NetWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-192">
-              <caret line="159" column="0" lean-forward="true" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+            <state relative-caret-position="217">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#623#624#0" expanded="true" />
@@ -148,9 +148,9 @@
         <option value="$PROJECT_DIR$/RestApiServer/src/HttpParserNoStream.java" />
         <option value="$PROJECT_DIR$/RestApiServer/src/DbWrapper.java" />
         <option value="$PROJECT_DIR$/RestApiServer/src/NetWrapper.java" />
-        <option value="$PROJECT_DIR$/RestApiClient/src/ClientLauncher.java" />
         <option value="$PROJECT_DIR$/RestApiServer/src/HttpParser.java" />
         <option value="$PROJECT_DIR$/RestApiServer/src/MultiTimer.java" />
+        <option value="$PROJECT_DIR$/RestApiClient/src/ClientLauncher.java" />
         <option value="$PROJECT_DIR$/RestApiServer/src/ServerLauncher.java" />
       </list>
     </option>
@@ -233,7 +233,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RunServer">
+  <component name="RunManager" selected="Application.RunTestClient">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -363,26 +363,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1558255943684</updated>
-      <workItem from="1558255961752" duration="28150000" />
+      <workItem from="1558255961752" duration="29298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28150000" />
+    <option name="totallyTimeSpent" value="29298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27253446" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27253446" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -442,7 +441,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="59" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestApiServer/src/ServerLauncher.java</url>
+          <line>215</line>
+          <properties />
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="61" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -495,14 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/json-20180813.jar!/org/json/JSONObject.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="321" column="15" lean-forward="false" selection-start-line="321" selection-start-column="15" selection-end-line="321" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/net/HttpURLConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -527,6 +526,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RestApiServer/src/MultiTimer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="91" column="9" lean-forward="false" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1167#1168#0" expanded="true" />
+            <element signature="e#1209#1210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/sun/net/www/http/HttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="688" column="0" lean-forward="false" selection-start-line="688" selection-start-column="0" selection-end-line="688" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RestApiClient/src/ClientLauncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/json-20180813.jar!/org/json/JSONException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#274#275#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RestApiServer/src/NetWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/json-20180813.jar!/org/json/JSONTokener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="335" column="0" lean-forward="false" selection-start-line="335" selection-start-column="0" selection-end-line="335" selection-end-column="0" />
+          <folding>
+            <element signature="e#1057#1058#0" expanded="true" />
+            <element signature="e#1108#1109#0" expanded="true" />
+            <element signature="e#9298#9299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/json-20180813.jar!/org/json/JSONObject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <element signature="e#879#880#0" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RestApiServer/src/DbWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1530">
@@ -539,30 +613,6 @@
             <marker date="1558291521041" expanded="true" signature="4422:4488" ph="select COUNT... Tasks" />
             <marker date="1558291521041" expanded="true" signature="6840:6856" ph="use JavaServ... " />
             <marker date="1558291521041" expanded="true" signature="6857:6914" ph="select dtSta... Tasks" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RestApiServer/src/NetWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="159" column="0" lean-forward="true" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RestApiServer/src/MultiTimer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="91" column="9" lean-forward="false" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1167#1168#0" expanded="true" />
-            <element signature="e#1209#1210#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -591,22 +641,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RestApiClient/src/ClientLauncher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RestApiServer/src/ServerLauncher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1640">
-          <caret line="104" column="53" lean-forward="false" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+        <state relative-caret-position="311">
+          <caret line="127" column="13" lean-forward="true" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
           <folding>
-            <element signature="e#0#6145#0" expanded="true" />
+            <element signature="e#0#6258#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#1965#1966#0" expanded="true" />
             <element signature="e#2008#2009#0" expanded="true" />
