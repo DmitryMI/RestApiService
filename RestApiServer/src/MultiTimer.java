@@ -90,8 +90,6 @@ public class MultiTimer
         @Override
         public void run()
         {
-            //System.out.println("Timer tick!");
-
             for(int i = 0; i < idList.size(); i++)
             {
                 DecrementTimeout(i, TIMER_PERIOD_MILLISECOND);

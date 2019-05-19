@@ -1,11 +1,18 @@
-import org.json.*;
+/* Summary
 
-import java.io.IOException;
+Program uses MS-SQL Server for storing task data.
+The database and tables must be created before the launch of the program.
+
+
+*/
+
+
+import org.json.*;
 import java.util.Hashtable;
 
 public class ServerLauncher
 {
-    private static final long RUNNING_TIME = 5000;
+    private static final long RUNNING_TIME = 120000; // 2 minutes
 
 
     public static void main(String[] args)
@@ -95,7 +102,7 @@ public class ServerLauncher
             }
             else
             {
-                workResult = new WorkResult(404, null);
+                workResult = new WorkResult(404, "404");
             }
         }
         catch (DbWrapper.ExecutionException e)
@@ -155,8 +162,17 @@ public class ServerLauncher
         @Override
         public void OnRequestReceived(String url, Hashtable params, NetWrapper.ResponseHandler responseHandler)
         {
+
+
             try
             {
+                if(!url.equals("/task"))
+                {
+                    responseHandler.MakeResponse(404, "404");
+                    responseHandler.Close();
+                    return;
+                }
+
                 try
                 {
                     String guidStr = (String)params.get("guid");
@@ -169,7 +185,7 @@ public class ServerLauncher
                 }
                 catch (NumberFormatException ex)
                 {
-                    responseHandler.MakeResponse(400, "");
+                    responseHandler.MakeResponse(400, "400");
                 }
                 finally
                 {
