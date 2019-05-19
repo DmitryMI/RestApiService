@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactManager">
+    <artifact type="jar" name="RestApiServer:jar">
+      <output-path>$PROJECT_DIR$/out/artifacts/RestApiServer_jar</output-path>
+      <root id="archive" name="RestApiServer.jar">
+        <element id="module-output" name="RestApiServer" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/lib/javax.jms.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/lib/javax.transaction.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/lib/javax.persistence.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/lib/javax.ejb.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/lib/javax.resource.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/lib/javax.servlet.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/lib/javax.annotation.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$USER_HOME$/Downloads/json-20180813.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$USER_HOME$/Downloads/Microsoft JDBC Driver 6.0 for SQL Server/sqljdbc_6.0/enu/jre8/sqljdbc42.jar" path-in-jar="/" />
+      </root>
+    </artifact>
+    <artifact type="jar" name="RestApiClient:jar">
+      <output-path>$PROJECT_DIR$/out/artifacts/RestApiClient_jar</output-path>
+      <root id="archive" name="RestApiClient.jar">
+        <element id="module-output" name="RestApiClient" />
+        <element id="extracted-dir" path="$USER_HOME$/Downloads/json-20180813.jar" path-in-jar="/" />
+      </root>
+    </artifact>
+  </component>
   <component name="InspectionProjectProfileManager">
     <profile version="1.0">
       <option name="myName" value="Project Default" />
@@ -8,6 +34,7 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/RestApiClient/RestApiClient.iml" filepath="$PROJECT_DIR$/RestApiClient/RestApiClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/RestApiServer/RestApiServer.iml" filepath="$PROJECT_DIR$/RestApiServer/RestApiServer.iml" />
     </modules>
   </component>
@@ -17,5 +44,22 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="intellij.haskell.settings.HaskellConfigurable" />
+  </component>
+  <component name="libraryTable">
+    <library name="Java EE 6-Java EE 6">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/javax.jms.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/javax.transaction.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/javax.persistence.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/javax.ejb.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/javax.resource.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/javax.servlet.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/javax.annotation.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/javax.servlet.jsp.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
   </component>
 </project>

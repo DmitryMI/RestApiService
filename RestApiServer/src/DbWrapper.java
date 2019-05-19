@@ -84,7 +84,7 @@ public class DbWrapper
         @Override
         public String toString()
         {
-            return String.format("%d, %s, %s", guid, timeStamp.toString(), status.name());
+            return String.format("%d, %s, %s", guid, timeStamp);
         }
     }
 
